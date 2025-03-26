@@ -41,6 +41,12 @@ void basicPipe() {
         close(pipeid[1]);
         printf("Parent PID : %d\n", getpid());
 
-        //wait(NULL); // wait for child finished !
+        wait(NULL); // wait for child finished !
     }
+}
+
+int main() {
+    basicPipe();
+
+    return 0;
 }
